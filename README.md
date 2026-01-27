@@ -2,6 +2,44 @@
 
 A lightweight tool to automatically configure iOS project settings for React Native projects. Works with any React Native project (Expo, bare React Native, etc.).
 
+## Why Nexjax?
+
+### The Problem
+
+When developing React Native apps for iOS, you face a frustrating cycle:
+
+1. **Every `expo prebuild --clean` wipes your Xcode settings** - Team ID, code signing, and other configurations are lost
+2. **Manual reconfiguration is tedious** - Open Xcode, navigate to signing settings, select team, fix Info.plist values... every single time
+3. **CI/CD pipelines become fragile** - Automated builds break when Xcode settings aren't properly configured
+
+### Why Not EAS or Other Solutions?
+
+| Solution | Limitation |
+|----------|------------|
+| **EAS Build** | Requires Expo account, cloud-based builds, costs money for higher tiers, overkill for simple local builds |
+| **Fastlane** | Heavy Ruby dependency, complex setup, steep learning curve, designed for full CI/CD pipelines |
+| **Manual Xcode** | Time-consuming, error-prone, doesn't survive prebuild, can't be automated |
+| **Expo Config Plugins** | Only works with Expo, requires understanding plugin system, can be complex for simple tasks |
+
+### The Nexjax Approach
+
+Nexjax takes a different philosophy:
+
+- **Zero dependencies** - Pure Node.js, no Ruby, no cloud accounts, no external services
+- **Instant setup** - One command: `npx nexjax YOUR_TEAM_ID`
+- **Works offline** - No internet required, no accounts needed
+- **Universal** - Works with Expo, bare React Native, or any hybrid setup
+- **Survives rebuilds** - Stores config in `ios.config.json`, reapply with single command
+- **CI/CD friendly** - Simple, predictable, easy to integrate into any pipeline
+- **Focused scope** - Does one thing well: configure iOS project settings
+
+### Perfect For
+
+- Developers who prebuild frequently and are tired of reconfiguring Xcode
+- Teams who want simple, reliable iOS configuration without cloud dependencies
+- CI/CD pipelines that need deterministic, offline-capable builds
+- Projects that don't need full EAS/Fastlane but still want automation
+
 ## Features
 
 - ✅ **Auto-configure Team ID** - Sets DEVELOPMENT_TEAM in Xcode project
