@@ -1,0 +1,33 @@
+{
+  "name": "nexjax",
+  "version": "1.0.0",
+  "description": "Automatically configure iOS project settings (Team ID, version, display name, build number, iPhone-only) for React Native projects",
+  "main": "lib/index.js",
+  "bin": {
+    "nexjax": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "xcode",
+    "configuration",
+    "automation",
+    "team-id",
+    "version",
+    "build-number"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ]
+}
