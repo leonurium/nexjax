@@ -216,6 +216,40 @@ Nexjax can automatically configure iOS permission strings in Info.plist. Each pe
 - `NSSiriUsageDescription` - Siri
 - `NSUserTrackingUsageDescription` - App Tracking Transparency
 
+### Generic Info.plist Booleans (e.g. ITSAppUsesNonExemptEncryption)
+
+Nexjax can also manage arbitrary **boolean keys** in Info.plist (for example, `ITSAppUsesNonExemptEncryption`).
+
+**From Expo `app.json`:**
+
+```json
+{
+  "expo": {
+    "ios": {
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIRequiresFullScreen": true
+      }
+    }
+  }
+}
+```
+
+**From `ios.config.json`:**
+
+```json
+{
+  "infoPlist": {
+    "ITSAppUsesNonExemptEncryption": false,
+    "UIRequiresFullScreen": true
+  }
+}
+```
+
+**Priority:**
+1. `ios.config.json` → `infoPlist` (overrides)
+2. `app.json` → `expo.ios.infoPlist` (boolean entries)
+
 ### Priority Order
 
 **For all settings (version, displayName, buildNumber, etc.):**

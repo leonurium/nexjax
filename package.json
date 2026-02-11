@@ -1,6 +1,6 @@
 {
   "name": "nexjax",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatically configure iOS project settings (Team ID, version, display name, build number, iPhone-only) for React Native projects",
   "repository": {
     "type": "git",
