@@ -61,9 +61,9 @@ yarn add --dev nexjax
 ```
 
 ### From npm github registry
-Configure npm to use github packages for the @leonurium scope:
+Configure npm home directory to use github packages for the @leonurium scope:
 ```bash
-# .npmrc
+# ~/.npmrc
 @leonurium:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
 ```
