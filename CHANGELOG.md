@@ -43,3 +43,16 @@ All permission keys ending with "UsageDescription" are supported, including:
 - NSSiriUsageDescription
 - NSUserTrackingUsageDescription
 - And any other key ending with "UsageDescription"
+
+
+## [1.0.6] - 2026-02-11
+
+### Added
+- **Info.plist boolean support**:
+  - Reads boolean keys from `app.json` → `expo.ios.infoPlist` (e.g. `ITSAppUsesNonExemptEncryption`, `UIRequiresFullScreen`, etc.).
+  - Allows overriding/defining boolean keys in `ios.config.json` via the `infoPlist` section.
+  - Automatically writes/updates corresponding `<key>...</key><true|false/>` entries in `Info.plist`.
+
+- **GitHub Packages registry support**:
+  - Package is now also available as `@leonurium/nexjax` on `https://npm.pkg.github.com`.
+  - CI workflow publishes to both npmjs (`nexjax`) and GitHub Packages (`@leonurium/nexjax`) from the same source.

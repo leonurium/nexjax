@@ -52,16 +52,26 @@ Nexjax takes a different philosophy:
 
 ## Installation
 
-### As a dev dependency:
+### From npmjs (default)
 
 ```bash
 npm install --save-dev nexjax
+# or
+yarn add --dev nexjax
 ```
 
-### Or use npx (no installation needed):
-
+### From npm github registry
+Configure npm to use github packages for the @leonurium scope:
 ```bash
-npx nexjax
+# .npmrc
+@leonurium:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+```
+then install:
+```bash
+npm install --save-dev @leonurium/nexjax
+# or
+yarn add --dev @leonurium/nexjax
 ```
 
 ## Quick Start
